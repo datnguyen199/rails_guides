@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  has_many :posts
+
   after_destroy CustomCallback.new
 
   before_validation do
